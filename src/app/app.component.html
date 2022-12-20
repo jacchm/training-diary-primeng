@@ -1,26 +1,63 @@
-
-<p-sidebar [showCloseIcon]="false" ngModel #sidenav [(visible)]="display" [transitionOptions]="'100ms'" (onShow)="print()">
-  <i class="pi pi-home" style="font-size: 2rem; margin-right: 1rem;"></i>
-  <a *ngIf="display">Homepage</a>
-  <p>{{sidenav.visible}}</p>
-
+<p-sidebar [(visible)]="display" [dismissible]="false" [transitionOptions]="'100ms'" [showCloseIcon]=false>
+  <ng-template pTemplate="header">
+    <div>Header Content</div>
+  </ng-template>
+  <div class="p-sidebar-content-top-line"></div>
+  <div *ngFor="let item of items" class="item">
+    <img [src]="item.icon" alt="" width="20%">
+    <a *ngIf="display">{{item.label}}</a>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="p-sidebar-content-top-line"></div>
+    <div style="margin-top: 1rem"> &copy; Jacek Chmiel</div>
+  </ng-template>
 </p-sidebar>
 
-<p-button type="text" (click)="getDOMPropertyValue()" icon="pi pi-arrow-right"></p-button>
+<!--<p-sidebar [showCloseIcon]="false" #sidenav [(visible)]="display" [transitionOptions]="'100ms'" (onShow)="print()">-->
+<!--  <i class="pi pi-home" style="font-size: 2rem; margin-right: 1rem;"></i>-->
+<!--  <a *ngIf="display">Homepage</a>-->
+<!--  <p>{{sidenav.visible}}</p>-->
 
-<div style="display: flex;">
-  <div *ngIf="display" style="background-color: yellow;" [style.width.px]="width">
-    <h1>Hidden</h1></div>
-  
-  <div style="background-color: rgb(165, 20, 20);">
-  
-    <h1>Displayed</h1>
-    
-    <h1>Displayed</h1>
-    <h1>Displayed</h1>
-    <h1>Displayed</h1>
-    <h1>Displayed</h1>
-    <h1>Displayed</h1>
-  
-  </div>
+<div
+  style="position:relative; margin-left: 12rem; margin-top: 0; padding-left: 1rem; background-color: var(--surface-ground)">
+  <!--  style="max-height: 1500px; display: flex; border-color: white; border-width: 14px; border-style: dashed; flex-wrap: wrap; flex-direction: column; margin:auto; background-color: var(&#45;&#45;primary-500); text-align: center; width:50%; justify-content: center">-->
+  <p-button style="position: fixed; top: 0; left: 0;" type="button" class="mr-2" (click)="display = true"
+            icon="pi pi-bars"></p-button>
+
+  <h1 style="background-color: yellow">Displayed</h1>
+  <h1 style="align-self: stretch">Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1 style="align-self: stretch; text-align: right">Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
+  <h1>Displayed</h1>
 </div>

@@ -1,3 +1,57 @@
-p-sidebar {
-    text-align: right ;
+:host ::ng-deep {
+  p-sidebar {
+
+    .p-sidebar-left {
+      width: 12rem;
+      font-size: 1rem;
+      border-width: 0 2px 0 0;
+
+      img {
+        margin-right: 1rem;
+        padding: .1rem;
+      }
+
+      .item:hover {
+        transform: scale(1.2);
+        overflow: visible;
+        background-size: contain;
+        cursor: pointer;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 1rem 0 1rem .3rem;
+        padding: .2rem 0;
+      }
+
+      .p-sidebar-content-top-line {
+        width: 100%;
+        border-bottom: white solid .15rem;
+        padding: 0;
+      }
+
+      .p-sidebar-content-bottom-line {
+        width: 100%;
+        border-bottom: white solid .15rem;
+        padding: 0;
+      }
+
+      .p-sidebar-header {
+        padding: 1rem;
+      }
+
+      .p-sidebar-content {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  //
+  //  img {
+  //    padding: 0.3rem;
+  //  }
+  //
+  //}
 }
